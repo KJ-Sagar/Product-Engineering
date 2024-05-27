@@ -1,0 +1,27 @@
+const int motorpin1=8;
+const int motorpin2=9;
+void setup()
+{
+  pinMode(12, OUTPUT);
+  pinMode(3, INPUT);
+  pinMode(motorpin1, OUTPUT);
+  
+  pinMode(motorpin2, OUTPUT);
+}
+
+void loop()
+
+{
+ int IRread= digitalRead(3);
+ if(IRread==1)
+  {
+    digitalWrite(12,HIGH);
+    digitalWrite(motorpin1, LOW);
+    digitalWrite(motorpin2, LOW);
+  } 
+ else
+ { 
+  digitalWrite(12,LOW);
+ digitalWrite(motorpin1,HIGH);
+ digitalWrite(motorpin2,LOW);
+}
