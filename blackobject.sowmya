@@ -12,7 +12,7 @@ void loop()
 
 {
  int IRread= digitalRead(3);
- if(IRread==0)
+ if(IRread==1)
   {
     digitalWrite(12,HIGH);
     digitalWrite(motorpin1, LOW);
